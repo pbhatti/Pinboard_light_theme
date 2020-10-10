@@ -1,595 +1,800 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name ="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css"/> <!-- 'monolith' theme -->
+        <link rel="stylesheet" href="styles.css">       
+        <title> Pinboard in CSS GRID </title> 
+    </head>
 
-*{
-    margin:0;
-    padding:0;
-}
+    <body>
+         
+        <div class="container1">
+            <header>
+                <div class="right_action">
+                    <img class="logo" src="images/logo.svg" alt="logo">
+                    <nav class="">
+                        <ul class="nav_links">
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="#">ANSWER</a></li>
+                            <li><a href="#" class="pinboard_active">PINBOARD</a></li>
+                            <li><a href="#">SPOTIQ</a></li>
+                            <li><a href="#">DATA</a></li>
+                            <li><a href="#">ADMIN</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="left_action">
+                    <!--
+                    <button class="toggle_btn" onclick="myFunction()">Toggle light mode</button>
+                    <script>
+                    function myFunction() {
+                    var element = document.body;
+                    element.classList.toggle("light-mode");
+                    }
+                    </script> 
+                    -->
+                    <img class="btn" src="images/profile.svg" alt="">
+                    <img class="btn" src="images/question.svg" alt="">
+                </div>
+            </header>
 
-.container1 {
-    background-color: #FFFFFF;
-    width: 100%;
-}
+            <div class="container2">
+                <div class="top_bar">
+                    <div class="title">
+                        <div class="title_left">
+                            <div class="H2"> India Virus Outbreak Pinboard 
+                                <span style="display:inline-block;">
+                                    <img class="" src="images/title_dropdown.svg"></img>                      
+                                </span>
+                            </div>
+                            <p class="p"> This interactive dashboard/map provides the latest global numbers and numbers by country of COVID-19 cases on a daily basis. The long description paragraph will come here. Incase its too long then it gets truncated or we set a word count limit to it.</p>
+                        </div>
+                        <div class="actions_right">
+                            <img class="" src="images/actions_right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="mob">
+                        <img class="" src="images/actions_right_mob.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="sticky" id="sticky">
+                <div class="filter">
+                    <img class="" src="images/filter.svg" alt="">
+                </div>
+                <nav class="pinboard_tab">
+                    <ul class="tab_links">
+                        <li class="tab"><a href="#">Case Data</a></li>                       
+                        <li class="tab"><a href="#" class="current" >Healthcare</a></li>
+                        <li class="tab"><a href="#">Infrastructure</a></li>
+                        <li class="tab"><a href="#">Migrants</a></li>
+                        <li class="tab"><a href="#">Finance</a></li>
+                        <li class="tab"><a href="#">Commerce</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
-header {
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 0 32px 0 32px;
-    border-bottom: 1px solid rgba(84, 84, 88, 0.65);
-    background-color: #323946;
-    position: fixed;
-    width: 100%;
-}
+            
+        <div class="container3">
+<!-- visualisations -->
+            <div class="wrapper">      
+                <div class="tile1 grid_item">
+                    <p class="p_bold">Total New Cases</p>
+                    <p class="p_metric">106,662</p>
+                </div>
+                <div class="tile2 grid_item">
+                    <p class="p_bold">Total Confirmed Cases</p>
+                    <p class="p_metric">4,761,559</p>
+                </div>
+                <div class="tile3 grid_item">
+                    <p class="p_bold">Total Deaths</p>
+                    <p class="p_metric">317,529</p>
+                </div>
+                <div class="tile4 grid_item">
+                    <p class="p_bold">Total Daily Cases</p>
+                    <p class="p_metric">5000</p>
+                </div>
+                <div class="tile5 grid_item">
+                    <p class="p_bold">Mild Cases </p>
+                    <p class="p_metric">20,000</p>
+                </div>
+                <div class="tile6 grid_item">
+                    <p class="p_bold">Critical Cases </p>
+                    <p class="p_metric">6449</p>
+                </div>
 
+                <div class="tile7 grid_item">
+                    <p class="p_bold">Total Tests</p>
+                    <p class="p_metric">4,386,379</p>
+                </div>
 
-.sticky {
-    width: 100%;
-    padding: 0 40px 0 40px; 
-    background-color: #FFFFFF;
-    box-shadow: 0px 2px 2px rgba(25, 35, 49, 0.04), 0px 2px 4px rgba(25, 35, 49, 0.04);
-}
+                <div class="tile8 grid_item">
+                    <p class="p_bold">Total Recovered</p>
+                    <p class="p_metric">113,233</p>
+                </div>
 
-.fixed {
-    position: fixed;
-    top: 50px;
-}
+                <!-- visulaisations -->
+                <div class="tile9 grid_item">
+                    <p class="p_bold">Confirmed Cases Over Time Daily </p>          
+                    <img class="viz" src="images/Histo3.svg" alt="">
+                </div>
 
-.top_bar {
-    margin-top: 50px;
-}
+                <div class="tile10 grid_item">
+                    <p class="p_bold">Confirmed vs Deaths </p>
+                    <img class="viz" src="images/Histo4.svg" alt="">
+                </div>
 
-.container2 {
-    padding: 32px 40px 0 40px;  
-    display: flex;
-    flex-direction: row;
-}
+                <div class="tile11 grid_item">
+                    <div class="note_tile">
+                        <img class="viz" src="images/corona.svg" alt="">
+                        <div class="note">
+                            <p class="note_title">MOST ASKED QUESTION</p>
+                            <p class="note_body">Can adolescents spread COVID-19 to other people even if they have mild or no symptoms?</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="tile12 grid_item">
+                    <p class="p_bold">Case Comparison (WHO Regions)</p>
+                    <img class="viz" src="images/Histo5.svg" alt="">
+                </div>
+                <div class="tile13 grid_item">
+                    <p class="p_bold">Case Comparison (India Regions)</p>
+                    <img class="viz" src="images/Histo.svg" alt="">
+                </div>
 
-.container3 {
-    padding: 32px 40px 0 40px;  
-    display: flex;
-    flex-direction: row;
-}
+                <div class="tile14 grid_item">
+                    <p class="p_bold">Deaths This Month </p>
+                    <img class="viz" src="images/Histo2.svg" alt="">
+                </div>        
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+        <script src="/main.js"></script>
+        <script>
+            function findOffset(element) {
+                var top = 0, left = 0;
 
-.filter_navbar{
-    background-color: #FFFFFF;
-    width: 100%;
-    border: solid #1C2330;
-}
+                do {
+                    top += element.offsetTop  || 0;
+                    left += element.offsetLeft || 0;
+                    element = element.offsetParent;
+                } while(element);
 
-.right_action {
-    display: flex !important;
-    align-items: center;
-}
+                return {
+                    top: top,
+                    left: left
+                };
+                }
 
-.title {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
+                window.onload = function () {
+                var stickyHeader = document.getElementById('sticky');
+                var headerOffset = findOffset(stickyHeader);
+                
+                window.onscroll = function() {
+                    // body.scrollTop is deprecated and no longer available on Firefox
+                    var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-.title_left {
-    padding-right: 32px;
-}
+                    if (bodyScrollTop > headerOffset.top) {
+                    stickyHeader.classList.add('fixed');
+                    } else {
+                    stickyHeader.classList.remove('fixed');
+                    }
+                };
+            };
+        </script>
 
-.filter {
-    margin-top: 16px;
-    align-items: center;
-}
-
-nav {
-    flex-direction: row;
-}
-
-.left_action .btn {
-    padding: 0 0 0 8px;
-    align-items: center;
-}
-
-
-.nav_links {
-    list-style: none;
-    display: flex;
-    padding: 16px 0 16px 0;
-}
-
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-    padding: 16px 30px 16px 30px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
-.nav_links li a:hover {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.nav_links li a:active {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
-}
-
-.pinboard_active {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
-    color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.container2 .pinboard_tab {
-    text-transform: capitalize !important;
-    padding-left: 0px !important;
-}
-
-
-.tab_links {
-    list-style: none;
-    display: flex;
-}
-
-.pinboard_tab .tab_links li {
-    padding: 16px 0 0 0;
-}
-
-.pinboard_tab .tab_links li a {
-    transition: all 0.3s ease 0s;
-    padding: 16px 30px 0 0;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #1D232F;
-    text-decoration: none;
-}
-
-.pinboard_tab li a:hover {
-    color: #2E75F0;
-}
-
-.pinboard_tab li a:active {
-    font-weight: 400 !important;
-    font-size: 16px !important;
-    color:#2E75F0 !important;
-}
-
-
-.pinboard_tab_active {
-    font-weight: 400 !important;
-    font-size: 16px !important;
-    color:#2E75F0 !important;
-}
-
-.underline {
-    padding-top: 8px;
-    border-bottom: 2px solid #2E75F0 !important;
-    width: 50% !important;
-    height: 2px;
-}
-
-body {
-    background-color: #F6F8FA;
-}
-
-
-
-.wrapper {
-    display: grid;
-    grid-template-columns:repeat(12, 1fr);
-    grid-template-rows:repeat(40, 16px);
-    gap: 16px 16px;
-    /*border: black 2px dotted; */
-}
-
-.grid_item {
-    background: #FFFFFF;
-    border-radius: 4px;
-    padding: 16px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: #1D232F;
-    box-shadow: 0px 2px 4px rgba(25, 35, 49, 0.04), 0px 2px 4px rgba(25, 35, 49, 0.04);
-}
-
-
-.note_tile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.note {
-    flex-direction: column;
-    padding-left: 24px;
-}
-.note_body {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color:rgba(255, 255, 255, 0.9);
-    line-height: 28px;
-}
-
-.note_title {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
-    text-transform: uppercase;
-    line-height: 24px;
-    padding-bottom: 4px;
-}
-
-.viz {
-    align-content: space-between;
-    text-align: left;
-    border-radius: 4px;
-    max-width: 100%;
-    height: auto;
-}
-
-.p_bold {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    padding-bottom: 8px;
-    color: #1D232F;
-}
-.p_small {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #A5ACB9;
-    border: brown 1px solid;
-}
-.p_metric {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 40px;
-    letter-spacing: -0.004em;
-    align-content: space-between;
-}
-
-.H1 {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    color: rgba(255, 255, 255, 0.9);
-    letter-spacing: -0.004em;
-}
-.H2 {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 40px;
-    color: #1D232F;
-    letter-spacing: -0.004em;
-
-}
-.p {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-weight: 375;
-    font-size: 14px;
-    line-height: 20px;
-    color: #777E8B;
-    padding-top: 8px;
-}
-
-/* first row tiles */
-.tile1 {
-    grid-column: 1/3;
-    grid-row: 1/5;
-}
-
-.tile2 {
-    grid-column: 3/5;
-    grid-row: 1/5;
-}
-
-.tile3 {
-    grid-column: 5/7;
-    grid-row: 1/5;
-}
-
-.tile4 {
-    grid-column: 7/9;
-    grid-row: 1/5;
-}
-
-.tile5 {
-    grid-column: 9/11;
-    grid-row: 1/5;
-}
-
-.tile6 {
-    grid-column: 11/13;
-    grid-row: 1/5;
-}
-
-/* second row tiles */
-
-.tile7 {
-    grid-column: 1/3;
-    grid-row: 5/9;
-}
-.tile8 {
-    grid-column: 1/3;
-    grid-row: 9/13;
-}
+        <script>
+            var header = document.getElementById("pinboard_tab");
+            var tab = header.getElementsByClassName("tab");
+            for (var i = 0; i < tab.length; i++) {
+            tab[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("current");
+            current[0].className = current[0].className.replace("current", "");
+            this.className += "current";
+            });
+            }
+        </script>
 
 
-.tile9 {
-    grid-column: 3/5;
-    grid-row: 5/13;
-}
+    </body>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 
-.tile10 {
-    grid-column: 5/7;
-    grid-row: 5/13;
-}
-.tile10 > .viz {
-    height: 80%;
-    width: auto;
-}
-
-.tile11 {
-    grid-column: 7/13;
-    grid-row: 5/13;
-    display: flex;
-    align-items: center !important;
-    background-color: #06BF7F;
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-template-rows: subgrid;
-}
-
-
-/* thirdrow tiles */
-
-.tile12 {
-    grid-column: 1/7;
-    grid-row: 13/25;
-}
-.tile12 > .viz {
-    width: 105%;
-    height: auto;
-}
-
-.tile13 {
-    grid-column: 7/10;
-    grid-row: 13/25;
-}
-.tile13 > .viz {
-    height: 70%;
-    width: auto;
-}
-
-.tile14 {
-    grid-column: 10/13;
-    grid-row: 13/25;
-}
-.tile14 > .viz {
-    width: 105%;
-    height: auto;
-}
-
-.mob {
-    display: none;
-}
-
-@media only screen and (max-width: 1366px) {
-    .mob {
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    .container1 {
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+    
+    header {
         display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0 32px 0 32px;
+        border-bottom: 1px solid rgba(84, 84, 88, 0.65);
+        background-color: #323946;
+        position: fixed;
+        width: 100%;
+    }
+    
+    
+    .sticky {
+        width: 100%;
+        padding: 0 40px 0 40px; 
+        background-color: #FFFFFF;
+        box-shadow: 0px 2px 2px rgba(25, 35, 49, 0.04), 0px 2px 4px rgba(25, 35, 49, 0.04);
+    }
+    
+    .fixed {
+        position: fixed;
+        top: 50px;
+    }
+    
+    .top_bar {
+        margin-top: 50px;
+    }
+    
+    .container2 {
+        padding: 32px 40px 0 40px;  
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .container3 {
+        padding: 32px 40px 0 40px;  
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .filter_navbar{
+        background-color: #FFFFFF;
+        width: 100%;
+        border: solid #1C2330;
+    }
+    
+    .right_action {
+        display: flex !important;
+        align-items: center;
+    }
+    
+    .title {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .title_left {
+        padding-right: 32px;
+    }
+    
+    .filter {
+        margin-top: 16px;
+        align-items: center;
+    }
+    
+    nav {
+        flex-direction: row;
+    }
+    
+    .left_action .btn {
+        padding: 0 0 0 8px;
+        align-items: center;
+    }
+    
+    
+    .nav_links {
+        list-style: none;
+        display: flex;
+        padding: 16px 0 16px 0;
+    }
+    
+    .nav_links li a {
+        transition: all 0.3s ease 0s;
+        padding: 16px 30px 16px 30px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    .pinboard_active {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+        color:#FFFFFF !important;
+    }
+    
+    
+    .nav_links li a:hover {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .nav_links li a:active {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+        color:#2E75F0;
+    }
+    
+    
+    
+    
+    .container2 .pinboard_tab {
+        text-transform: capitalize !important;
+        padding-left: 0px !important;
+    }
+    
+    
+    .tab_links {
+        list-style: none;
+        display: flex;
+    }
+    
+    .tab {
+        border: none;
+        outline: none;
+        padding: 16px 32px 16px 0 !important;
+      }
+    
+    
+    
+    .pinboard_tab .tab_links li a {
+        transition: all 0.3s ease 0s;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #1D232F;
+        text-decoration: none;
+    }
+    
+    .pinboard_tab li a:hover {
+        color: #2E75F0;
+    }
+    
+    .pinboard_tab li a:active {
+        font-weight: 400 !important;
+        font-size: 14px !important;
+    }
+    
+    .current {
+        padding-bottom: 16px;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        border-bottom: 2px solid #2E75F0 !important;
+        color:#2E75F0 !important;
+    }
+    
+    
+    body {
+        background-color: #F6F8FA;
+    }
+    
+    
+    
+    .wrapper {
+        display: grid;
+        grid-template-columns:repeat(12, 1fr);
+        grid-template-rows:repeat(40, 16px);
+        gap: 16px 16px;
+        /*border: black 2px dotted; */
+    }
+    
+    .grid_item {
+        background: #FFFFFF;
+        border-radius: 4px;
+        padding: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #1D232F;
+        box-shadow: 0px 2px 4px rgba(25, 35, 49, 0.04), 0px 2px 4px rgba(25, 35, 49, 0.04);
+    }
+    
+    
+    .note_tile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .note {
+        flex-direction: column;
+        padding-left: 24px;
+    }
+    .note_body {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        color:rgba(255, 255, 255, 0.9);
+        line-height: 28px;
+    }
+    
+    .note_title {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        line-height: 24px;
+        padding-bottom: 4px;
+    }
+    
+    .viz {
+        align-content: space-between;
+        text-align: left;
+        border-radius: 4px;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .p_bold {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        padding-bottom: 8px;
+        color: #1D232F;
+    }
+    .p_small {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #A5ACB9;
+        border: brown 1px solid;
+    }
+    .p_metric {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -0.004em;
+        align-content: space-between;
+    }
+    
+    .H1 {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: -0.004em;
+    }
+    .H2 {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40px;
+        color: #1D232F;
+        letter-spacing: -0.004em;
+    
+    }
+    .p {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        font-weight: 375;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777E8B;
         padding-top: 8px;
     }
-    .actions_right, .left_action {
-        display: none;
-    }
+    
     /* first row tiles */
-        .tile1 {
-                grid-column: 1/5;
-                grid-row: 1/5;
-        }
-
-        .tile2 {
-            grid-column: 5/9;
-            grid-row: 1/5;
-        }
-
-        .tile3 {
-            grid-column: 9/13;
-            grid-row: 1/5;
-        }
-
-         /* second row tiles */
-        .tile4 {
-            grid-column: 1/5;
-            grid-row: 5/9;
-        }
-
-        .tile5 {
-            grid-column: 5/9;
-            grid-row: 5/9;
-        }
-
-        .tile6 {
-            grid-column: 9/13;
-            grid-row: 5/9;
-        }
-
-        /* third row tiles */
-
-        .tile7 {
-            grid-column: 1/5;
-            grid-row: 9/13;
-        }
-        .tile8 {
-            grid-column: 1/5;
-            grid-row: 13/17;
-        }
-
-        .tile9 {
-            grid-column: 5/9;
-            grid-row: 9/17;
-        }
-        
-        .tile10 {
-            grid-column: 9/13;
-            grid-row: 9/17;
-        }
-
-        /* 4th row tiles */
-        .tile10 > .viz {
-            height: 80%;
-            width: auto;
-        }
-
-        .tile11 {
-            grid-column: 1/13;
-            grid-row: 17/25;
-            display: flex;
-            align-items: center !important;
-            background-color: #025B3C;
-            display: grid;
-            grid-template-columns: subgrid;
-            grid-template-rows: subgrid;
-        }
-        .tile12 {
-            grid-column: 1/13;
-            grid-row: 25/37;
-        }
-
-        .tile13 {
-            grid-column: 1/6;
-            grid-row: 37/48;
-        }
-        .tile13 > .viz {
-            height: 70%;
-            width: auto;
-        }
-        
-        .tile14 {
-            grid-column: 6/13;
-            grid-row: 37/48;
-        }
-        .tile14 > .viz {
-            width: 80%;
-            height: 90%;
-            align-self:center;
-        }
-}
-
-
-
-
-@media only screen and (max-width: 760px) {
-
-    .mob {
-        display: flex !important;
-        padding-top: 8px;
+    .tile1 {
+        grid-column: 1/3;
+        grid-row: 1/5;
     }
-    .actions_right, .left_action {
+    
+    .tile2 {
+        grid-column: 3/5;
+        grid-row: 1/5;
+    }
+    
+    .tile3 {
+        grid-column: 5/7;
+        grid-row: 1/5;
+    }
+    
+    .tile4 {
+        grid-column: 7/9;
+        grid-row: 1/5;
+    }
+    
+    .tile5 {
+        grid-column: 9/11;
+        grid-row: 1/5;
+    }
+    
+    .tile6 {
+        grid-column: 11/13;
+        grid-row: 1/5;
+    }
+    
+    /* second row tiles */
+    
+    .tile7 {
+        grid-column: 1/3;
+        grid-row: 5/9;
+    }
+    .tile8 {
+        grid-column: 1/3;
+        grid-row: 9/13;
+    }
+    
+    
+    .tile9 {
+        grid-column: 3/5;
+        grid-row: 5/13;
+    }
+    
+    .tile10 {
+        grid-column: 5/7;
+        grid-row: 5/13;
+    }
+    .tile10 > .viz {
+        height: 80%;
+        width: auto;
+    }
+    
+    .tile11 {
+        grid-column: 7/13;
+        grid-row: 5/13;
+        display: flex;
+        align-items: center !important;
+        background-color: #06BF7F;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+    }
+    
+    
+    /* thirdrow tiles */
+    
+    .tile12 {
+        grid-column: 1/7;
+        grid-row: 13/25;
+    }
+    .tile12 > .viz {
+        width: 105%;
+        height: auto;
+    }
+    
+    .tile13 {
+        grid-column: 7/10;
+        grid-row: 13/25;
+    }
+    .tile13 > .viz {
+        height: 70%;
+        width: auto;
+    }
+    
+    .tile14 {
+        grid-column: 10/13;
+        grid-row: 13/25;
+    }
+    .tile14 > .viz {
+        width: 105%;
+        height: auto;
+    }
+    
+    .mob {
         display: none;
     }
-
-      /* first row tiles */
-          .tile1 {
-                  grid-column: 1/7;
+    
+    @media only screen and (max-width: 1366px) {
+        .mob {
+            display: flex !important;
+            padding-top: 8px;
+        }
+        .actions_right, .left_action {
+            display: none;
+        }
+        /* first row tiles */
+            .tile1 {
+                    grid-column: 1/5;
+                    grid-row: 1/5;
+            }
+    
+            .tile2 {
+                grid-column: 5/9;
+                grid-row: 1/5;
+            }
+    
+            .tile3 {
+                grid-column: 9/13;
+                grid-row: 1/5;
+            }
+    
+             /* second row tiles */
+            .tile4 {
+                grid-column: 1/5;
+                grid-row: 5/9;
+            }
+    
+            .tile5 {
+                grid-column: 5/9;
+                grid-row: 5/9;
+            }
+    
+            .tile6 {
+                grid-column: 9/13;
+                grid-row: 5/9;
+            }
+    
+            /* third row tiles */
+    
+            .tile7 {
+                grid-column: 1/5;
+                grid-row: 9/13;
+            }
+            .tile8 {
+                grid-column: 1/5;
+                grid-row: 13/17;
+            }
+    
+            .tile9 {
+                grid-column: 5/9;
+                grid-row: 9/17;
+            }
+            
+            .tile10 {
+                grid-column: 9/13;
+                grid-row: 9/17;
+            }
+    
+            /* 4th row tiles */
+            .tile10 > .viz {
+                height: 80%;
+                width: auto;
+            }
+    
+            .tile11 {
+                grid-column: 1/13;
+                grid-row: 17/25;
+                display: flex;
+                align-items: center !important;
+                background-color: #025B3C;
+                display: grid;
+                grid-template-columns: subgrid;
+                grid-template-rows: subgrid;
+            }
+            .tile12 {
+                grid-column: 1/13;
+                grid-row: 25/37;
+            }
+    
+            .tile13 {
+                grid-column: 1/6;
+                grid-row: 37/48;
+            }
+            .tile13 > .viz {
+                height: 70%;
+                width: auto;
+            }
+            
+            .tile14 {
+                grid-column: 6/13;
+                grid-row: 37/48;
+            }
+            .tile14 > .viz {
+                width: 80%;
+                height: 90%;
+                align-self:center;
+            }
+    }
+    
+    
+    
+    
+    @media only screen and (max-width: 760px) {
+    
+        .mob {
+            display: flex !important;
+            padding-top: 8px;
+        }
+        .actions_right, .left_action {
+            display: none;
+        }
+    
+          /* first row tiles */
+              .tile1 {
+                      grid-column: 1/7;
+                      grid-row: 1/5;
+              }
+      
+              .tile2 {
+                  grid-column: 7/13;
                   grid-row: 1/5;
-          }
-  
-          .tile2 {
-              grid-column: 7/13;
-              grid-row: 1/5;
-          }
-  /* second row tiles */
-          .tile3 {
-              grid-column: 1/7;
-              grid-row: 5/9;
-          }     
-          .tile4 {
-              grid-column: 7/13;
-              grid-row: 5/9;
-          }
-  /* third row tiles */
-          .tile5 {
-              grid-column: 1/7;
-              grid-row: 9/13;
-          }
-          .tile6 {
-              grid-column: 7/13;
-              grid-row: 9/13;
-          }
-  
-  /* fourth row tiles */        
-          .tile7 {
-              grid-column: 1/7;
-              grid-row: 13/17;
-          }
-          .tile8 {
-              grid-column: 7/13;
-              grid-row: 13/17;
-          }
-
-  /* fifth row tiles */ 
-          .tile9 {
-              grid-column: 1/7;
-              grid-row: 17/25;
-          }
-          .tile10 {
-              grid-column: 7/13;
-              grid-row: 17/25;
-          }
-          .tile10 > .viz {
-              height: 80%;
-              width: auto;
-          }
-/* sixth row tiles */ 
-          .tile11 {
-              grid-column: 1/13;
-              grid-row: 25/33;
-              display: flex;
-              align-items: center !important;
-              background-color: #025B3C;
-              display: grid;
-              grid-template-columns: subgrid;
-              grid-template-rows: subgrid;
-          }
-/* 7th row tiles */
-          .tile12 {
-              grid-column: 1/13;
-              grid-row: 33/45;
-          }
-/* 8th row tiles */
-          .tile13 {
-              grid-column: 1/7;
-              grid-row: 45/58;
-          }
-          .tile13 > .viz {
-              width: 70%;
-              height: auto;
-          }
-          
-          .tile14 {
-              grid-column: 7/13;
-              grid-row: 45/58;
-          }
-          .tile14 > .viz {
-              width: 90%;
-              height: auto;
-              align-self:center;
-          }
-}
-
-
-.light-mode {
-    background-color: #EFEFF4;
-    color: #1C2330;
-}
+              }
+      /* second row tiles */
+              .tile3 {
+                  grid-column: 1/7;
+                  grid-row: 5/9;
+              }     
+              .tile4 {
+                  grid-column: 7/13;
+                  grid-row: 5/9;
+              }
+      /* third row tiles */
+              .tile5 {
+                  grid-column: 1/7;
+                  grid-row: 9/13;
+              }
+              .tile6 {
+                  grid-column: 7/13;
+                  grid-row: 9/13;
+              }
+      
+      /* fourth row tiles */        
+              .tile7 {
+                  grid-column: 1/7;
+                  grid-row: 13/17;
+              }
+              .tile8 {
+                  grid-column: 7/13;
+                  grid-row: 13/17;
+              }
+    
+      /* fifth row tiles */ 
+              .tile9 {
+                  grid-column: 1/7;
+                  grid-row: 17/25;
+              }
+              .tile10 {
+                  grid-column: 7/13;
+                  grid-row: 17/25;
+              }
+              .tile10 > .viz {
+                  height: 80%;
+                  width: auto;
+              }
+    /* sixth row tiles */ 
+              .tile11 {
+                  grid-column: 1/13;
+                  grid-row: 25/33;
+                  display: flex;
+                  align-items: center !important;
+                  background-color: #025B3C;
+                  display: grid;
+                  grid-template-columns: subgrid;
+                  grid-template-rows: subgrid;
+              }
+    /* 7th row tiles */
+              .tile12 {
+                  grid-column: 1/13;
+                  grid-row: 33/45;
+              }
+    /* 8th row tiles */
+              .tile13 {
+                  grid-column: 1/7;
+                  grid-row: 45/58;
+              }
+              .tile13 > .viz {
+                  width: 70%;
+                  height: auto;
+              }
+              
+              .tile14 {
+                  grid-column: 7/13;
+                  grid-row: 45/58;
+              }
+              .tile14 > .viz {
+                  width: 90%;
+                  height: auto;
+                  align-self:center;
+              }
+    }
+    
+    
+    .light-mode {
+        background-color: #EFEFF4;
+        color: #1C2330;
+    }

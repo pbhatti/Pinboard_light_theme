@@ -67,15 +67,12 @@
                 </div>
                 <nav class="pinboard_tab">
                     <ul class="tab_links">
-                        <li>
-                            <a href="#" class="pinboard_tab_active">Case Data</a>
-                            <p class="underline"></p>
-                        </li>
-                        <li><a href="#">Healthcare</a></li>
-                        <li><a href="#" >Infrastructure</a></li>
-                        <li><a href="#">Migrants</a></li>
-                        <li><a href="#">Finance</a></li>
-                        <li><a href="#">Commerce</a></li>
+                        <li class="tab"><a href="#">Case Data</a></li>                       
+                        <li class="tab"><a href="#" class="current" >Healthcare</a></li>
+                        <li class="tab"><a href="#">Infrastructure</a></li>
+                        <li class="tab"><a href="#">Migrants</a></li>
+                        <li class="tab"><a href="#">Finance</a></li>
+                        <li class="tab"><a href="#">Commerce</a></li>
                     </ul>
                 </nav>
             </div>
@@ -189,7 +186,20 @@
                     }
                 };
             };
-
         </script>
+
+        <script>
+            var header = document.getElementById("pinboard_tab");
+            var tab = header.getElementsByClassName("tab");
+            for (var i = 0; i < tab.length; i++) {
+            tab[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("current");
+            current[0].className = current[0].className.replace("current", "");
+            this.className += "current";
+            });
+            }
+        </script>
+
+
     </body>
 </html>
