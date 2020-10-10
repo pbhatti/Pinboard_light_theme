@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name ="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css"/> <!-- 'monolith' theme -->
+        <link rel="stylesheet" href="styles.css">       
+        <title> Pinboard in CSS GRID </title> 
+    </head>
+
+    <body>
+         
+        <div class="container1">
+            <header>
+                <div class="right_action">
+                    <img class="logo" src="images/logo.svg" alt="logo">
+                    <nav class="">
+                        <ul class="nav_links">
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="#">ANSWER</a></li>
+                            <li><a href="#" class="pinboard_active">PINBOARD</a></li>
+                            <li><a href="#">SPOTIQ</a></li>
+                            <li><a href="#">DATA</a></li>
+                            <li><a href="#">ADMIN</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="left_action">
+                    <!--
+                    <button class="toggle_btn" onclick="myFunction()">Toggle light mode</button>
+                    <script>
+                    function myFunction() {
+                    var element = document.body;
+                    element.classList.toggle("light-mode");
+                    }
+                    </script> 
+                    -->
+                    <img class="btn" src="images/profile.svg" alt="">
+                    <img class="btn" src="images/question.svg" alt="">
+                </div>
+            </header>
+
+            <div class="container2">
+                <div class="top_bar">
+                    <div class="title">
+                        <div class="title_left">
+                            <div class="H2"> India Virus Outbreak Pinboard 
+                                <span style="display:inline-block;">
+                                    <img class="" src="images/title_dropdown.svg"></img>                      
+                                </span>
+                            </div>
+                            <p class="p"> This interactive dashboard/map provides the latest global numbers and numbers by country of COVID-19 cases on a daily basis. The long description paragraph will come here. Incase its too long then it gets truncated or we set a word count limit to it.</p>
+                        </div>
+                        <div class="actions_right">
+                            <img class="" src="images/actions_right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="mob">
+                        <img class="" src="images/actions_right_mob.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="sticky" id="sticky">
+                <div class="filter">
+                    <img class="" src="images/filter.svg" alt="">
+                </div>
+                <nav class="pinboard_tab">
+                    <ul class="tab_links">
+                        <li>
+                            <a href="#" class="pinboard_tab_active">Case Data</a>
+                            <p class="underline"></p>
+                        </li>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#" >Infrastructure</a></li>
+                        <li><a href="#">Migrants</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Commerce</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+            
+        <div class="container3">
+<!-- visualisations -->
+            <div class="wrapper">      
+                <div class="tile1 grid_item">
+                    <p class="p_bold">Total New Cases</p>
+                    <p class="p_metric">106,662</p>
+                </div>
+                <div class="tile2 grid_item">
+                    <p class="p_bold">Total Confirmed Cases</p>
+                    <p class="p_metric">4,761,559</p>
+                </div>
+                <div class="tile3 grid_item">
+                    <p class="p_bold">Total Deaths</p>
+                    <p class="p_metric">317,529</p>
+                </div>
+                <div class="tile4 grid_item">
+                    <p class="p_bold">Total Daily Cases</p>
+                    <p class="p_metric">5000</p>
+                </div>
+                <div class="tile5 grid_item">
+                    <p class="p_bold">Mild Cases </p>
+                    <p class="p_metric">20,000</p>
+                </div>
+                <div class="tile6 grid_item">
+                    <p class="p_bold">Critical Cases </p>
+                    <p class="p_metric">6449</p>
+                </div>
+
+                <div class="tile7 grid_item">
+                    <p class="p_bold">Total Tests</p>
+                    <p class="p_metric">4,386,379</p>
+                </div>
+
+                <div class="tile8 grid_item">
+                    <p class="p_bold">Total Recovered</p>
+                    <p class="p_metric">113,233</p>
+                </div>
+
+                <!-- visulaisations -->
+                <div class="tile9 grid_item">
+                    <p class="p_bold">Confirmed Cases Over Time Daily </p>          
+                    <img class="viz" src="images/Histo3.svg" alt="">
+                </div>
+
+                <div class="tile10 grid_item">
+                    <p class="p_bold">Confirmed vs Deaths </p>
+                    <img class="viz" src="images/Histo4.svg" alt="">
+                </div>
+
+                <div class="tile11 grid_item">
+                    <div class="note_tile">
+                        <img class="viz" src="images/corona.svg" alt="">
+                        <div class="note">
+                            <p class="note_title">MOST ASKED QUESTION</p>
+                            <p class="note_body">Can adolescents spread COVID-19 to other people even if they have mild or no symptoms?</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="tile12 grid_item">
+                    <p class="p_bold">Case Comparison (WHO Regions)</p>
+                    <img class="viz" src="images/Histo5.svg" alt="">
+                </div>
+                <div class="tile13 grid_item">
+                    <p class="p_bold">Case Comparison (India Regions)</p>
+                    <img class="viz" src="images/Histo.svg" alt="">
+                </div>
+
+                <div class="tile14 grid_item">
+                    <p class="p_bold">Deaths This Month </p>
+                    <img class="viz" src="images/Histo2.svg" alt="">
+                </div>        
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+        <script src="/main.js"></script>
+        <script>
+            function findOffset(element) {
+                var top = 0, left = 0;
+
+                do {
+                    top += element.offsetTop  || 0;
+                    left += element.offsetLeft || 0;
+                    element = element.offsetParent;
+                } while(element);
+
+                return {
+                    top: top,
+                    left: left
+                };
+                }
+
+                window.onload = function () {
+                var stickyHeader = document.getElementById('sticky');
+                var headerOffset = findOffset(stickyHeader);
+                
+                window.onscroll = function() {
+                    // body.scrollTop is deprecated and no longer available on Firefox
+                    var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+                    if (bodyScrollTop > headerOffset.top) {
+                    stickyHeader.classList.add('fixed');
+                    } else {
+                    stickyHeader.classList.remove('fixed');
+                    }
+                };
+            };
+
+        </script>
+    </body>
+</html>
