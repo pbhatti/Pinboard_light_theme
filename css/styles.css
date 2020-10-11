@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
 
 *{
     margin:0;
@@ -223,7 +223,7 @@ body {
 
 .note_bodyA {
     font-family: 'Rubik', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     color:rgba(255, 255, 255, 0.9);
     line-height: 28px;
@@ -231,7 +231,7 @@ body {
 
 .note_body {
     font-family: 'Rubik', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     color:rgba(255, 255, 255, 0.9);
     line-height: 28px;
