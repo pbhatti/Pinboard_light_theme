@@ -205,6 +205,30 @@ body {
     flex-direction: column;
     padding-left: 24px;
 }
+
+.note7A {
+    flex-direction: flex-start !important;
+    flex-direction: column;
+    padding-left: 16px;
+}
+
+.note_link {
+    color: #2770EF;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 8px;
+    margin-bottom: 12px;
+}
+
+.note_bodyA {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color:rgba(255, 255, 255, 0.9);
+    line-height: 28px;
+}
+
 .note_body {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
@@ -325,10 +349,21 @@ body {
     grid-row: 9/13;
 }
 
+.tile7A {
+    grid-column: 1/5;
+    grid-row: 5/22;
+    background-color: #323946;
+}
+
 
 .tile9 {
     grid-column: 3/5;
     grid-row: 5/13;
+}
+
+.tile9A {
+    grid-column: 5/7;
+    grid-row: 5/16;
 }
 
 .tile10 {
@@ -362,7 +397,35 @@ body {
     grid-template-rows: subgrid;
 }
 
+.tile11A {
+    grid-column: 5/9;
+    grid-row: 5/22;
+    display: flex;
+    align-items: center !important;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+}
 
+.tile11A .viz {
+    padding-top: 16px;
+    width: 90%;
+}
+
+.tile12A {
+    grid-column: 9/13;
+    grid-row: 5/22;
+    display: flex;
+    align-items: center !important;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+}
+
+.tile12A .viz {
+    padding-top: 16px;
+    width: 80%;
+}
 /* thirdrow tiles */
 
 .tile12 {
