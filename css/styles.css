@@ -400,7 +400,6 @@ body {
     grid-column: 5/9;
     grid-row: 5/22;
     display: flex;
-    align-items: center !important;
     display: grid;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
@@ -409,21 +408,21 @@ body {
 .tile11A .viz {
     padding-top: 16px;
     width: 90%;
+    margin: auto;
 }
 
 .tile12A {
     grid-column: 9/13;
     grid-row: 5/22;
     display: flex;
-    align-items: center !important;
-    display: grid;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
 }
 
 .tile12A .viz {
     padding-top: 16px;
-    width: 80%;
+    width: 65%;
+    margin: auto;
 }
 /* thirdrow tiles */
 
@@ -441,7 +440,7 @@ body {
     grid-row: 13/25;
 }
 .tile13 > .viz {
-    height: 70%;
+    height: 80%;
     width: auto;
 }
 
